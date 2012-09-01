@@ -1,24 +1,25 @@
 {
-    "name": "lazy-lines",
-    "version": "0.1.0",
-    "description": "Read streams line-by-line",
-    "keywords": [
-        "lazy", "line-by-line"
-    ],
-    "author": {
-        "name": "Roman Kivalin",
-        "email": "roman@kivalin.me",
-        "web": "https://kivalin.me",
-        "twitter": "rkivalin"
-    }, 
-    "license": {
-            "type": "MIT"
-    }, 
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/rkivalin/node-lazy-lines.git"
-    }, 
-    "engines": {
-        "node": ">=0.2.0"
-    }
+  "name": "lazy-lines",
+  "version": "0.1.1",
+  "description": "Read streams line-by-line",
+  "keywords": [
+    "lazy",
+    "line-by-line"
+  ],
+  "author": {
+    "name": "Roman Kivalin",
+    "email": "roman@kivalin.me",
+    "web": "https://kivalin.me",
+    "twitter": "rkivalin"
+  },
+  "license": {
+    "type": "MIT"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rkivalin/node-lazy-lines.git"
+  },
+  "engines": {
+    "node": ">=0.2.0"
+  }
 }
