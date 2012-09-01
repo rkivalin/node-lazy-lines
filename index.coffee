@@ -16,14 +16,14 @@ class LazyLines
     firstUnhandledIndex = 0
     for chr, i in chunk
       if chr in [rCode, nCode]
-        @bufferedChunks.push(chunk.slice(0, firstUnhandledIndex, i))
+        @bufferedChunks.push(chunk.slice(firstUnhandledIndex, i))
         @bufferedLength += i - firstUnhandledIndex
-        onLineEndFound.call(@, chunk, i)
+        onLineEndFound.call(@)
         i += 1 if chr == rCode and chunk[i+1] == nCode
         firstUnhandledIndex = i + 1
-    #if firstUnhandledIndex != chunk.length
-    @bufferedChunks.push(chunk.slice(firstUnhandledIndex))
-    @bufferedLength += chunk.length - firstUnhandledIndex
+    if firstUnhandledIndex != chunk.length
+      @bufferedChunks.push(chunk.slice(firstUnhandledIndex))
+      @bufferedLength += chunk.length - firstUnhandledIndex
 
   onStreamEnd = ->
     if @bufferedLength > 0
@@ -31,7 +31,7 @@ class LazyLines
 
   onLineEndFound = ->
     if @encoding?
-      line = (bufferedChunk.toString(@encoding) in @bufferedChunks).join('')
+      line = (bufferedChunk.toString(@encoding) for bufferedChunk in @bufferedChunks).join('')
     else
       line = new Buffer(@bufferedLength)
       targetLength = 0
