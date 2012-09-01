@@ -7,7 +7,7 @@
     ],
     "author": {
         "name": "Roman Kivalin",
-        "email": "acl@kivalin.me",
+        "email": "roman@kivalin.me",
         "web": "https://kivalin.me",
         "twitter": "rkivalin"
     }, 
@@ -16,7 +16,7 @@
     }, 
     "repository": {
         "type": "git",
-        "url": "https://github.com/rkivalin/lazy-lines.git"
+        "url": "https://github.com/rkivalin/node-lazy-lines.git"
     }, 
     "engines": {
         "node": ">=0.2.0"
